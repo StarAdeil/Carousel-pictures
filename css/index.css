@@ -1,0 +1,116 @@
+body{
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+}
+#demo{
+	display: none;
+}
+#ani{
+	width: 0px;
+	height: 300px;
+	border:solid black 0px;
+	animation-name: animat;
+	animation-duration: 40s;
+	transform-origin:center;
+	margin:50px 600px;
+	animation-iteration-count: infinite;
+	transform-style: preserve-3d;
+	animation-timing-function: linear;
+}
+#ani div{
+	width: 500px;
+	height: 300px;
+	top:0px;
+	left:0px;
+	backface-visibility: visible;
+	transform-origin: left;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	color:white;
+	cursor:pointer;
+}
+#ani div:hover{
+	box-shadow: 5px 5px 5px red;
+	transition: 1s;
+}
+#ani img{
+	width: 500px;
+	height: 300px;
+}
+#ani div:nth-child(1){
+	background-color: red;
+	transform: rotateY(36deg) translateX(100px);
+	
+}
+#ani div:nth-child(2){
+	background-color: blue;
+	transform: rotateY(72deg) translateX(100px);
+}
+#ani div:nth-child(3){
+	background-color: green;
+	transform: rotateY(108deg) translateX(100px);
+}
+#ani div:nth-child(4){
+	background-color: red;
+	transform: rotateY(144deg) translateX(100px);
+}
+#ani div:nth-child(5){
+	background-color: blue;
+	transform: rotateY(180deg) translateX(100px);
+}
+#ani div:nth-child(6){
+	background-color: green;
+	transform: rotateY(216deg) translateX(100px);
+}
+#ani div:nth-child(7){
+	background-color: green;
+	transform: rotateY(252deg) translateX(100px);
+}
+#ani div:nth-child(8){
+	background-color: green;
+	transform: rotateY(288deg) translateX(100px);
+}
+#ani div:nth-child(9){
+	background-color: green;
+	transform: rotateY(324deg) translateX(100px);
+}
+#ani div:nth-child(10){
+	background-color: green;
+	transform: rotateY(360deg) translateX(100px);
+}
+#ani h2{
+	position: absolute;
+	top:100px;
+}
+#ani span{
+	display: none;
+}
+#wrapper .elemBlock{
+	margin-top: 50px;
+	border: 5px solid indigo;
+    border-image: linear-gradient(to right top, blueviolet, indigo, blueviolet);
+    border-image-slice: 1;
+    padding: 30px;
+    text-align: justify;
+}
+
+#wrapper{
+	margin-top: 100px;
+}
+#wrapper img{
+	width: 700px;
+	position: center;
+}
+#wrapper span{
+	font-size: 20px;
+	text-align: justify;
+}
+@keyframes animat {
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
